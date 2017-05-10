@@ -1,0 +1,9 @@
+G:\AccountantSystemv5\AccountantSystemv5\bin\Debug\netcoreapp1.1\AccountantSystemv5.deps.json
+G:\AccountantSystemv5\AccountantSystemv5\bin\Debug\netcoreapp1.1\AccountantSystemv5.runtimeconfig.json
+G:\AccountantSystemv5\AccountantSystemv5\bin\Debug\netcoreapp1.1\AccountantSystemv5.runtimeconfig.dev.json
+G:\AccountantSystemv5\AccountantSystemv5\bin\Debug\netcoreapp1.1\AccountantSystemv5.dll
+G:\AccountantSystemv5\AccountantSystemv5\bin\Debug\netcoreapp1.1\AccountantSystemv5.pdb
+G:\AccountantSystemv5\AccountantSystemv5\obj\Debug\netcoreapp1.1\UserSecretsAssemblyInfo.cs
+G:\AccountantSystemv5\AccountantSystemv5\obj\Debug\netcoreapp1.1\AccountantSystemv5.AssemblyInfo.cs
+G:\AccountantSystemv5\AccountantSystemv5\obj\Debug\netcoreapp1.1\AccountantSystemv5.dll
+G:\AccountantSystemv5\AccountantSystemv5\obj\Debug\netcoreapp1.1\AccountantSystemv5.pdb
