@@ -10,8 +10,6 @@ namespace AccountantSystemv5.Models
     {
         public LaborAcquisition()
         {
-            InflowLALTs = new HashSet<InflowLALT>();
-            FulfillmentWSLAs = new HashSet<FulfillmentWSLA>();
         }
 
         [Display(Name = "Time Card #")]
@@ -49,9 +47,11 @@ namespace AccountantSystemv5.Models
 
         public Employee_1 Employee_1 { get; set; }
 
-        //1-m inflowLaLT FulfillmentWSLA
+        //Dat > 
+        // labor type vs LA
         public ICollection<InflowLALT> InflowLALTs { get; set; }
 
+        // lA vs labor type
         public ICollection<FulfillmentWSLA> FulfillmentWSLAs { get; set; }
     }
 }

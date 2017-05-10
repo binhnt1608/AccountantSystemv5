@@ -15,8 +15,8 @@ namespace AccountantSystemv5.Models
         public int LaborTypeID { get; set; }
 
         //m-1 workschedule labortype
-        public virtual WorkSchedule WorkSchedule { get; set; }
+        public WorkSchedule WorkSchedule { get; set; }
 
-        public virtual LaborType LaborType { get; set; }
+        public LaborType LaborType { get; set; }
     }
 }

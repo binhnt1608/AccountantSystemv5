@@ -10,7 +10,6 @@ namespace AccountantSystemv5.Models
     {
         public Purchase()
         {
-            InflowPurchaseInventories = new HashSet<InflowPurchaseInventory>();
         }
 
         [Key]
@@ -42,7 +41,8 @@ namespace AccountantSystemv5.Models
         //1-m
         public ICollection<CashDisbursement> CashDisbursement { get; set; }
 
-
-        public ICollection<InflowPurchaseInventory> InflowPurchaseInventories { get; set; }
+        //Dat >
+        //Inventory vs Purchase
+        public List<InflowPurchaseInventory> InflowPurchaseInventories { get; set; }
     }
 }

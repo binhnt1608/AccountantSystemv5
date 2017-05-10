@@ -10,7 +10,6 @@ namespace AccountantSystemv5.Models
     {
         public PurchaseOrder()
         {
-            ReservationPurchaseOrderInventories = new HashSet<ReservationPurchaseOrderInventory>();
         }
         [Display(Name = "Purchase Order #")]
         public int PurchaseOrderID { get; set; }
@@ -45,7 +44,8 @@ namespace AccountantSystemv5.Models
         //Purchase 1-m
         public virtual ICollection<Purchase> Purchase { get; set; }
 
-        // 1-m Reservation PO-I
-        public virtual ICollection<ReservationPurchaseOrderInventory> ReservationPurchaseOrderInventories { get; set; }
+        //Dat > 
+        // Reservation PO-I
+        public List<ReservationPurchaseOrderInventory> ReservationPurchaseOrderInventories { get; set; }
     }
 }

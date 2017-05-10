@@ -39,7 +39,10 @@ namespace AccountantSystemv5.Models
         // public SaleOrder SaleOrder { get; set; }
         //1-m cashreceipt OutflowSaleInventory
         public ICollection<CashReceipt> CashReceipt { get; set; }
+        
 
-        public ICollection<OutflowSaleInventory> OutflowSaleInventory { get; set; }
+        //Dat
+        // Inventory vs Sale
+        public List<OutflowSaleInventory> OutflowSaleInventories { get; set; }
     }
 }

@@ -8,11 +8,7 @@ namespace AccountantSystemv5.Models
 {
     public class Inventory
     {
-        public Inventory()
-        {
-            InflowPurchaseInventory = new HashSet<InflowPurchaseInventory>();
-            ReservationPurchaseOrderInventory = new HashSet<ReservationPurchaseOrderInventory>();
-        }
+        public Inventory() { }
 
         [Required]
         [Display(Name = "Inventory #")]
@@ -44,16 +40,21 @@ namespace AccountantSystemv5.Models
 
         public InventoryDiameter InventoryDiameter { get; set; }
 
-        //// Inventory  1-m Inflow P-I
-        public ICollection<InflowPurchaseInventory> InflowPurchaseInventory { get; set; }
+        //Dat
+        // Inventory vs Sale Order
+        public List<ReservationSaleOrderInventory> ReservationSaleOrderInventories { get; set; }
 
-        // Inventory 1-m Reservation PO-I
-        public ICollection<ReservationPurchaseOrderInventory> ReservationPurchaseOrderInventory { get; set; }
+        // Inventory vs Sale
+        public List<OutflowSaleInventory> OutflowSaleInventories { get; set; }
 
-        // Inventory 1-m Reservation SO-I
-        public ICollection<ReservationSaleOrderInventory> ReservationSaleOrderInventory { get; set; }
+        // Inventory vs Purchase Order
+        public List<ReservationPurchaseOrderInventory> ReservationPurchaseOrderInventories { get; set; }
 
-        //outflow 1-m
-        public ICollection<OutflowSaleInventory> OutflowSaleInventory { get; set; }
+        // Inventory vs Purchase
+        public List<InflowPurchaseInventory> InflowPurchaseInventories { get; set; }
+
+
+
+
     }
 }

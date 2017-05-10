@@ -10,7 +10,6 @@ namespace AccountantSystemv5.Models
     {
         public Employee()
         {
-            InflowEmployeeWithholdings = new HashSet<InflowEmployeeWithholding>();
         }
         [Display(Name = "Employee #")]
         public int EmployeeID { get; set; }
@@ -99,6 +98,10 @@ namespace AccountantSystemv5.Models
         public ICollection<StockSubscription> StockSubscription { get; set; }
 
         // 1-m Inflow E-W
-        public ICollection<InflowEmployeeWithholding> InflowEmployeeWithholdings { get; set; }
+        //public ICollection<InflowEmployeeWithholding> InflowEmployeeWithholdings { get; set; }
+
+        //Dat 
+        //Employee vs WorkSchedule
+        public List<ExternalPartWSE> ExternalPartWSEs { get; set; }
     }
 }

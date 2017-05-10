@@ -6,17 +6,16 @@ using System.Threading.Tasks;
 
 namespace AccountantSystemv5.Models
 {
-    public class FulfillmentWSLA
+    public class ExternalPartWSE
     {
         [Display(Name = "Schedule #")]
         public int ScheduleID { get; set; }
 
-        [Display(Name = "Time Card #")]
-        public int TimeCardID { get; set; }
+        [Display(Name = "EmployeeID-Admin #")]
+        public int EmployeeID { get; set; }
 
-        //Dat >
-        public LaborAcquisition LaborAcquisition { get; set; }
-
-        public WorkSchedule WorkSchedule { get; set; }
+        //m-1 employee withholding
+        public Employee Employee { get; set; }
+        public WorkSchedule Schedule { get; set; }
     }
 }

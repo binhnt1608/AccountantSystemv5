@@ -10,19 +10,21 @@ namespace AccountantSystemv5.Models
     {
         public WorkSchedule()
         {
-            ReservationWSLTs = new HashSet<ReservationWSLT>();
-
-            FulfillmentWSLAs = new HashSet<FulfillmentWSLA>();
-
         }
 
         [Display(Name = "Work Schedule #")]
         public int ScheduleID { get; set; }
 
-        //1-m FulfillmentWSLA ReservationWSLT
+        //Dat > 
+        // WorkSchedule vs LaborType
+        public List<FulfillmentWSLA> FulfillmentWSLAs { get; set; }
 
-        public ICollection<FulfillmentWSLA> FulfillmentWSLAs { get; set; }
+        // Work Schedule vs LaborType
+        public List<ReservationWSLT> ReservationWSLTs { get; set; }
 
-        public ICollection<ReservationWSLT> ReservationWSLTs { get; set; }
+        // Work Schedule vs Employee
+        public List<ExternalPartWSE> ExternalPartWSEs { get; set; }
+
+        //Dat <
     }
 }

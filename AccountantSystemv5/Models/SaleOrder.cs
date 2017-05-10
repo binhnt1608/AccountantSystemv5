@@ -32,7 +32,13 @@ namespace AccountantSystemv5.Models
         //1-m employee customer ReservationSaleOrderInventory
         public ICollection<Employee> Employee { get; set; }
         public ICollection<Customer> Customer { get; set; }
-        public ICollection<ReservationSaleOrderInventory> ReservationSaleOrderInventory { get; set; }
+
+
+        //Dat
+        //Inventory vs Sale Order
+        public List<ReservationSaleOrderInventory> ReservationSaleOrderInventories { get; set; }
+
+
         //m-1 sale
         public Sale Sale { get; set; }
     }
