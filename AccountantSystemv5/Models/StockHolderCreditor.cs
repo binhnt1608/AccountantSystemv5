@@ -50,6 +50,6 @@ namespace AccountantSystemv5.Models
         //1-m LoanAgreemnet StockSubscription FulfillmentSSCD
         public ICollection<LoanAgreement> LoanAgreemnet { get; set; }
         public ICollection<StockSubscription> StockSubscription { get; set; }
-        public ICollection<FulfillmentSSCD> FulfillmentSSCD { get; set; }
+        //public ICollection<FulfillmentSSCD> FulfillmentSSCD { get; set; }
     }
 }

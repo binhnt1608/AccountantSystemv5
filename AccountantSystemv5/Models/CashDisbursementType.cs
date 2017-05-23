@@ -22,6 +22,6 @@ namespace AccountantSystemv5.Models
         public string PayeeTypeName { get; set; }
 
         //1-m Cashdisbursement
-        public ICollection<CashDisbursement> CashDisbursement { get; set; }
+        public virtual ICollection<CashDisbursement> CashDisbursement { get; set; }
     }
 }

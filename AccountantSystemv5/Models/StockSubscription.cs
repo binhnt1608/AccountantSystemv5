@@ -34,9 +34,11 @@ namespace AccountantSystemv5.Models
         public DateTime StockIssueDate { get; set; }
 
         //1-1 cashreceipt
-        public CashReceipt CashReceipt { get; set; }
+        public virtual CashReceipt CashReceipt { get; set; }
         //m-1 StockholderCreditor Employee
-        public StockHolderCreditor StockHolderCreditor { get; set; }
-        public Employee Employee { get; set; }
+        public virtual StockHolderCreditor StockHolderCreditor { get; set; }
+        public virtual Employee Employee { get; set; }
+        //1-m FulfillmentSSCD
+        public virtual ICollection<FulfillmentSSCD> FulfillmentSSCD { get; set; }
     }
 }

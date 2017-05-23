@@ -8,23 +8,16 @@ namespace AccountantSystemv5.Models
 {
     public class Purchase
     {
-        public Purchase()
-        {
-        }
+        //public Purchase()
+        //{
+        //}
 
         [Key]
         [Display(Name = "Purchase #")]
         public int InventoryReceiptID { get; set; }
 
-        [Required]
-        [Display(Name = "Date")]
-        [DataType(DataType.Date, ErrorMessage = "Date Time is invalid")]
-        public DateTime ReceivingReportDate { get; set; }
-
-
-        [Required]
-        [Display(Name = "Vendor Invoice ID")]
-        public int ReceivingReportVendorInvoiceID { get; set; }
+        [Display(Name = "Purchase Order #")]
+        public int PurchaseOrderID { get; set; }
 
         [Required]
         [Display(Name = "Employee")]
@@ -34,12 +27,25 @@ namespace AccountantSystemv5.Models
         [Display(Name = "Vendor")]
         public string VendorID { get; set; }
 
-        //m-1
-        public Employee Employee { get; set; }
-        public PurchaseOrder PurchaseOrder { get; set; }
+        [Required]
+        [Display(Name = "Date")]
+        [DataType(DataType.Date, ErrorMessage = "Date Time is invalid")]
+        public DateTime ReceivingReportDate { get; set; }
 
-        //1-m
-        public ICollection<CashDisbursement> CashDisbursement { get; set; }
+        [Display(Name = "Amount")]
+        public int InventoryReceiptAmount { get; set; }
+
+        [Required]
+        [Display(Name = "Vendor Invoice ID")]
+        public int ReceivingReportVendorInvoiceID { get; set; }
+        
+        //m-1 employee purchaseorder vendor
+        public virtual Employee Employee { get; set; }
+        public virtual PurchaseOrder PurchaseOrder { get; set; }
+        public virtual Vendor Vendor { get; set; }
+        
+        //1-1 cashdisbursement
+        public virtual CashDisbursement CashDisbursement { get; set; }
 
         //Dat >
         //Inventory vs Purchase

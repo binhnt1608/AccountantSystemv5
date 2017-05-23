@@ -8,15 +8,15 @@ namespace AccountantSystemv5.Models
 {
     public class Withholding
     {
-        public Withholding()
-        {
-            InflowEmployeeWithholdings = new HashSet<InflowEmployeeWithholding>();
-        }
-
-        [Required]
+        //public Withholding()
+        //{
+        //    InflowEmployeeWithholdings = new HashSet<InflowEmployeeWithholding>();
+        //}
         [Key]
+        public int ID { get; set; }
+        [Required]
         [Display(Name = "Marital Status")]
-        public int MaritalStatus { get; set; }
+        public string MaritalStatus { get; set; }
 
         [Required]
         [Display(Name = "Tax Bracket")]
@@ -42,7 +42,9 @@ namespace AccountantSystemv5.Models
         [DisplayFormat(DataFormatString = "{0:$#.##}")]
         public decimal FWTBracketBaseAmt { get; set; }
 
-        // 1 - m Inflow E-W
-        public ICollection<InflowEmployeeWithholding> InflowEmployeeWithholdings { get; set; }
+        //// 1 - m Inflow E-W
+        //public ICollection<InflowEmployeeWithholding> InflowEmployeeWithholdings { get; set; }
+        //1-1
+        public virtual Employee Employee { get; set; }
     }
 }

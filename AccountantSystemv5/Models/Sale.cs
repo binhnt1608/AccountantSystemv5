@@ -31,14 +31,13 @@ namespace AccountantSystemv5.Models
         [DisplayFormat(DataFormatString = "{0:$#.##}")]
         public int SaleAmount { get; set; }
 
-        //m-1
-        public ICollection<SaleOrder> SaleOrder { get; set; }
-        public ICollection<Customer> Customer { get; set; }
-        public ICollection<Employee> Employee { get; set; }
+        //m-1 saleorder customer employee
+        public virtual SaleOrder SaleOrder { get; set; }
+        public virtual Customer Customer { get; set; }
+        public virtual Employee Employee { get; set; }
 
-        // public SaleOrder SaleOrder { get; set; }
-        //1-m cashreceipt OutflowSaleInventory
-        public ICollection<CashReceipt> CashReceipt { get; set; }
+        //1-1 cashreceipt 
+        public virtual CashReceipt CashReceipt { get; set; }
         
 
         //Dat

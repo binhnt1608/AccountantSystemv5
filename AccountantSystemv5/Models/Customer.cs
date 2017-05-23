@@ -8,7 +8,7 @@ namespace AccountantSystemv5.Models
 {
     public class Customer
     {
-        [Display(Name = "ID")]
+        [Display(Name = "Customer #")]
         public int CustomerID { get; set; }
 
         [Required]
@@ -53,7 +53,9 @@ namespace AccountantSystemv5.Models
         [StringLength(50, MinimumLength = 1, ErrorMessage = "Contact cannot be longer than 50 and at least 1 characters.")]
         public string CustomerPrimaryContact { get; set; }
 
-        //1-m cashreceipt
-        public ICollection<CashReceipt> CashReceipt { get; set; }
+        //1-m cashreceipt sale saleorder
+        public virtual ICollection<CashReceipt> CashReceipt { get; set; }
+        public virtual ICollection<Sale> Sale { get; set; }
+        public virtual ICollection<SaleOrder> SaleOrder { get; set; }
     }
 }

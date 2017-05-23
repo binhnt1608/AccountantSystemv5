@@ -16,7 +16,7 @@ namespace AccountantSystemv5.Models
         public int LoanID { get; set; }
 
         [Required]
-        [Display(Name = "Payment Due Date")]
+        [Display(Name = "Due Date")]
         [DataType(DataType.Date, ErrorMessage = "Date Time is invalid")]
         [DisplayFormat(DataFormatString = "{dd-MM-yyyy:0}", ApplyFormatInEditMode = true)]
         public DateTime PaymentDueDate { get; set; }
@@ -31,9 +31,9 @@ namespace AccountantSystemv5.Models
         public int InterestAmount { get; set; }
 
         //m-1 LoanArgeement
-        public LoanAgreement LoanAgreement { get; set; }
+        public virtual LoanAgreement LoanAgreement { get; set; }
 
         //1-1 CashDisbursement
-        public CashDisbursement CashDisbursement { get; set; }
+        public virtual CashDisbursement CashDisbursement { get; set; }
     }
 }

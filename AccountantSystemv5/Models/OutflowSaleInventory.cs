@@ -20,9 +20,9 @@ namespace AccountantSystemv5.Models
         [Display(Name = "Price")]
         public int SOPrice { get; set; }
 
-        //m=1
-        public Sale Sale { get; set; }
+        //m=1 Sale Inventory
+        public virtual Sale Sale { get; set; }
 
-        public Inventory Inventory { get; set; }
+        public virtual Inventory Inventory { get; set; }
     }
 }

@@ -22,6 +22,6 @@ namespace AccountantSystemv5.Models
         public string PayeeTypeName { get; set; }
 
         //1-m Cashreceipt
-        public ICollection<CashReceipt> CashReceipt { get; set; }
+        public virtual ICollection<CashReceipt> CashReceipt { get; set; }
     }
 }

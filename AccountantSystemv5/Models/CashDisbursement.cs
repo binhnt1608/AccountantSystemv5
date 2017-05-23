@@ -34,7 +34,7 @@ namespace AccountantSystemv5.Models
         [Display(Name = "Event #")]
         public int InventoryReceiptID { get; set; }
 
-        //cashdebursement amount
+        //cashdisbursement amount
         [Display(Name = "Amount Paid")]
         public int CashDisbursementAmount { get; set; }
 
@@ -44,16 +44,18 @@ namespace AccountantSystemv5.Models
         [DisplayFormat(DataFormatString = "{dd-MM-yyyy:0}", ApplyFormatInEditMode = true)]
         public DateTime CashDisbursementDate { get; set; }
 
-        // m-1 purchase cashaccount employee vendor
-        public Purchase Purchase { get; set; }
-        public CashAccount CashAccount { get; set; }
-        public Employee Employee { get; set; }
-        public Vendor Vendor { get; set; }
-        public CashDisbursementType CashDisbursementType { get; set; }
-        public LaborAcquisition LaborAcquisition { get; set; }
-        //1-1 employee_1 FulfillmentLACD FulfillmentSSCD 
-        public Employee_1 Employee_1 { get; set; }
-        public FulfillmentLACD FulfillmentLACD { get; set; }
-        public FulfillmentSSCD FulfillmentSSCD { get; set; }
+        // m-1  cashaccount employee vendor
+        
+        public virtual CashAccount CashAccount { get; set; }
+        public virtual Employee Employee { get; set; }
+        public virtual Vendor Vendor { get; set; }
+        public virtual CashDisbursementType CashDisbursementType { get; set; }
+        public virtual LaborAcquisition LaborAcquisition { get; set; }
+
+        //1-1 purchase employee_1 FulfillmentLACD FulfillmentSSCD 
+        // public Employee_1 Employee_1 { get; set; }
+        public virtual Purchase Purchase { get; set; }
+        public virtual FulfillmentLACD FulfillmentLACD { get; set; }
+        public virtual FulfillmentSSCD FulfillmentSSCD { get; set; }
     }
 }

@@ -21,8 +21,8 @@ namespace AccountantSystemv5.Models
         public int SOPrice { get; set; }
 
         //m-1 saleorder inventory
-        public SaleOrder SaleOrder{ get; set; }
+        public virtual SaleOrder SaleOrder{ get; set; }
 
-        public Inventory Inventory { get; set; }
+        public virtual Inventory Inventory { get; set; }
     }
 }

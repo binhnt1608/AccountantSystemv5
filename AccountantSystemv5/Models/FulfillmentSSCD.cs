@@ -25,9 +25,9 @@ namespace AccountantSystemv5.Models
         public int DividendPerShare { get; set; }
 
         //m-1 StockSubscription
-        public StockSubscription StockSubscription { get; set; }
+        public virtual StockSubscription StockSubscription { get; set; }
 
         //1-1 CashDisbursement
-        public CashDisbursement CashDisbursement { get; set; }
+        public virtual CashDisbursement CashDisbursement { get; set; }
     }
 }

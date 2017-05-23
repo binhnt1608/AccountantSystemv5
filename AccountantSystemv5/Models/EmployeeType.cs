@@ -15,6 +15,7 @@ namespace AccountantSystemv5.Models
         [Display(Name = "Employee Type")]
         [StringLength(50, MinimumLength = 1, ErrorMessage = "Employee type's name cannot be longer than 50 and at least 1 characters.")]
 
+        //1-m employee
         public ICollection<Employee> Employee { get; set; }
     }
 }

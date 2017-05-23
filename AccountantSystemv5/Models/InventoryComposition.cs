@@ -20,6 +20,6 @@ namespace AccountantSystemv5.Models
         public string InventoryCompositionDescription { get; set; }
 
         //1-m inventory
-        public ICollection<Inventory> Inventory { get; set; }
+        public virtual ICollection<Inventory> Inventory { get; set; }
     }
 }

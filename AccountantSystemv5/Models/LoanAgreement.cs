@@ -47,13 +47,13 @@ namespace AccountantSystemv5.Models
         public int PaymentsPerYear { get; set; }
 
         //m-1 Employee StockHolderCreditor
-        public Employee Employee { get; set; }
-        public StockHolderCreditor StockHolderCreditor { get; set; }
+        public virtual Employee Employee { get; set; }
+        public virtual StockHolderCreditor StockHolderCreditor { get; set; }
 
         //1-m FulfillmentLACD
-        public ICollection<FulfillmentLACD> FulfillmentLACD { get; set; }
+        public virtual ICollection<FulfillmentLACD> FulfillmentLACD { get; set; }
 
         //1-1 
-        public CashReceipt CashReceipt { get; set; }
+        public virtual CashReceipt CashReceipt { get; set; }
     }
 }

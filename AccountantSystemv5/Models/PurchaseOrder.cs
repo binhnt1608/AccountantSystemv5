@@ -8,9 +8,9 @@ namespace AccountantSystemv5.Models
 {
     public class PurchaseOrder
     {
-        public PurchaseOrder()
-        {
-        }
+        //public PurchaseOrder()
+        //{
+        //}
         [Display(Name = "Purchase Order #")]
         public int PurchaseOrderID { get; set; }
 
@@ -34,7 +34,8 @@ namespace AccountantSystemv5.Models
 
         [Required]
         [Display(Name = "Amount")]
-        public string PurchaseOrderAmount { get; set; }
+        [DisplayFormat(DataFormatString = "{0:$#.##}")]
+        public int PurchaseOrderAmount { get; set; }
 
         //fk
         //Employee vendor m-1

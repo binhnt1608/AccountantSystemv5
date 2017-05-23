@@ -26,7 +26,7 @@ namespace AccountantSystemv5.Models
         public string BankAccountNumber { get; set; }
 
         //1-m cashdisbursement cashreceipt
-        public ICollection<CashDisbursement> CashDisbursement { get; set; }
-        public ICollection<CashReceipt> CashReceipt { get; set; }
+        public virtual ICollection<CashDisbursement> CashDisbursement { get; set; }
+        public virtual ICollection<CashReceipt> CashReceipt { get; set; }
     }
 }

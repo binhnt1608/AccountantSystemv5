@@ -14,7 +14,7 @@ namespace AccountantSystemv5.Models
         [Display(Name = "Exemption Amount")]
         public int ExemptionAmount { get; set; }
 
-        //1-m
+        //1-m employee
         public ICollection<Employee> Employee { get; set; }
     }
 }

@@ -4330,7 +4330,7 @@
       ]
     },
     "Microsoft.AspNetCore.Authentication/1.1.1": {
-      "sha512": "KQ39XT2JiQOTdA+/OeXNNAw8cBh5D6N+qKc7bXdtaZH6aXcCL8Au5N6AVtLtwJnr603Rn6ZtuimZNFC7XOz5WA==",
+      "sha512": "mhcy7YqKlprwdp3yHSc7nql42+oZhzHeS0FJCaly0ltu4qZttQuN/RNqxhk/Jr+SLA+nw35nWxNWsRJ9Atn+WA==",
       "type": "package",
       "path": "microsoft.aspnetcore.authentication/1.1.1",
       "files": [
@@ -4343,7 +4343,7 @@
       ]
     },
     "Microsoft.AspNetCore.Authentication.Cookies/1.1.1": {
-      "sha512": "YNTHmYXQGfuk5/3o0WpcCeZniBfsoVC4QC35ZfxYJ8E/P6OAmZnNc1N860jWl3Aev7Kp5AEbqUlthJS4PtizoA==",
+      "sha512": "VmflcxwQ5LS8/DCh7NNwBcrhFbj/23QUaKxT5rKUkhUVLHiF8tVUfNpscDjWDi5JRvjyWwIIowt4a1TgDwN3Fg==",
       "type": "package",
       "path": "microsoft.aspnetcore.authentication.cookies/1.1.1",
       "files": [
@@ -4395,7 +4395,7 @@
       ]
     },
     "Microsoft.AspNetCore.Cryptography.KeyDerivation/1.1.1": {
-      "sha512": "sSfIghqM0VgbQ6cX4ieYywrZu7viAmvEozqruFXJy6XOJu3ceZdpaLMC+C4nJRr/76VSA+KvkSlD1ICCYeI8SA==",
+      "sha512": "dPUWxShuoTZI727Q4WA11PAo0ZzNsXk+1AQAXNJDwJK7fcEIIquk57RXjin8GO6ZPLxnTbazaCOI/+p7tIgbng==",
       "type": "package",
       "path": "microsoft.aspnetcore.cryptography.keyderivation/1.1.1",
       "files": [
@@ -4458,7 +4458,7 @@
       ]
     },
     "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore/1.1.1": {
-      "sha512": "zhAvUOlXlXU7pdyDD4HEV0o6QC6KyedW6TNskf2rXRz8PIkqhE1ZNJ2zb8oSW+1R07UFbWniPnKxv5BxVAuVLA==",
+      "sha512": "hz2MCvM9BlV7jS/R6imcvyBXbW5glZ/Uz9P0bRimjjQtu7sQC+c/CptU3yHM4SMbuwnzMN5PgjJECD+heTh3qw==",
       "type": "package",
       "path": "microsoft.aspnetcore.diagnostics.entityframeworkcore/1.1.1",
       "files": [
@@ -4588,7 +4588,7 @@
       ]
     },
     "Microsoft.AspNetCore.Identity/1.1.1": {
-      "sha512": "cSNJ3D0kfkW/TSEnvdIShEysrAX2D7sRzRCwNwrElhm+YzzG9WBY4a0+pWuz/1uFMMoOY9MfszhhHNBcNtWCCQ==",
+      "sha512": "Skr+jF/kmd6oJSW1FjuYa3EyB2JjOw9GIvcfkEA6kW8WSJXZcwjLTHpaD5VV2i6V/hM9AB5AmnNYGwps7AEcUg==",
       "type": "package",
       "path": "microsoft.aspnetcore.identity/1.1.1",
       "files": [
@@ -4601,7 +4601,7 @@
       ]
     },
     "Microsoft.AspNetCore.Identity.EntityFrameworkCore/1.1.1": {
-      "sha512": "ah1BFKtuzYMGg0NeAJ7f3Iay3yCTNrEJKMspmECS4hl6uuV+Nit53VWKhdkr63yDsCZOHCtozGSas5hF2GJUzw==",
+      "sha512": "zTOmxrfQkXqxxXLLkwmHSqaYSI7FJOtyl+rj9zIM7PgvhuqfIya1Tc1S+Cj8Gw+Pt+Zz7qoRp50HjI2yJLBjzg==",
       "type": "package",
       "path": "microsoft.aspnetcore.identity.entityframeworkcore/1.1.1",
       "files": [
@@ -5193,7 +5193,7 @@
       ]
     },
     "Microsoft.EntityFrameworkCore.Tools/1.1.0": {
-      "sha512": "sv9JJsG4p/zu4KrRXjTsZ/Bp1mdRbOLkqrxDtQo6P5e1O+1Z6qXm4gaR5km25tpqLN4QD10lX/Kw6MEyLWf2aQ==",
+      "sha512": "FYid4PCd/LFRr8ya/6oV2ZgV5FBAhMa+bPC3MDYAlAKcFxIYmSfRfZAjRGQmjDV00P5GTotVHJa1AchxMMBVxw==",
       "type": "package",
       "path": "microsoft.entityframeworkcore.tools/1.1.0",
       "files": [
@@ -5326,7 +5326,7 @@
       ]
     },
     "Microsoft.Extensions.Configuration.UserSecrets/1.1.1": {
-      "sha512": "Mlzhf4rYd8mAa1hEMW0qCuptu3nLmIrCUi0+XtS4FMb0fJCP4f+FPmDjnIXqfPQuYVlrchqXZnpfZlDdAJjzBQ==",
+      "sha512": "0Zsvff0Z3sYcZL5rNQ2r31O1aDaNIwtvNtuFCdsI9penI/vyA7OV/xpUZVOCKrLlXAD6RVH7CWZfhX+/DhYPyQ==",
       "type": "package",
       "path": "microsoft.extensions.configuration.usersecrets/1.1.1",
       "files": [
@@ -10995,15 +10995,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\NQDCRAZY\\.nuget\\packages\\": {}
+    "C:\\Users\\USER\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NQDCRAZY\\Documents\\GitHub\\AccountantSystemv5\\AccountantSystemv5\\AccountantSystemv5.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\Documents\\GitHub\\AccountantSystemv5\\AccountantSystemv5\\AccountantSystemv5.csproj",
       "projectName": "AccountantSystemv5",
-      "projectPath": "C:\\Users\\NQDCRAZY\\Documents\\GitHub\\AccountantSystemv5\\AccountantSystemv5\\AccountantSystemv5.csproj",
-      "outputPath": "C:\\Users\\NQDCRAZY\\Documents\\GitHub\\AccountantSystemv5\\AccountantSystemv5\\obj\\",
+      "projectPath": "C:\\Users\\USER\\Documents\\GitHub\\AccountantSystemv5\\AccountantSystemv5\\AccountantSystemv5.csproj",
+      "outputPath": "C:\\Users\\USER\\Documents\\GitHub\\AccountantSystemv5\\AccountantSystemv5\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"

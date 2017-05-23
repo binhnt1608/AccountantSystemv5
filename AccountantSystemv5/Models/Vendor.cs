@@ -12,7 +12,7 @@ namespace AccountantSystemv5.Models
         public int VendorID { get; set; }
 
         [Required]
-        [Display(Name = "Vendor Name")]
+        [Display(Name = "Name")]
         [StringLength(50, MinimumLength = 1, ErrorMessage = "Vendor's name cannot be longer than 50 and at least 1 characters.")]
         public string VendorName { get; set; }
 
@@ -21,7 +21,7 @@ namespace AccountantSystemv5.Models
         [StringLength(50, MinimumLength = 1, ErrorMessage = "Address1 cannot be longer than 50 and at least 1 characters.")]
         public string VendorAddress1 { get; set; }
 
-        [Display(Name = "Address1")]
+        [Display(Name = "Address2")]
         public string VendorAddress2 { get; set; }
 
         [Required]
@@ -47,7 +47,7 @@ namespace AccountantSystemv5.Models
         [StringLength(50, MinimumLength = 1, ErrorMessage = "State cannot be longer than 50 and at least 1 characters.")]
         public string VendorPrimaryContact { get; set; }
 
-        //cashdisbursement purchaseorder 1-m
+        //1-m purchaseorder
         public ICollection<CashDisbursement> CashDisbursement { get; set; }
         public ICollection<PurchaseOrder> PurchaseOrder { get; set; }
     }

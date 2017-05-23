@@ -38,8 +38,13 @@ namespace AccountantSystemv5.Models
         [Required]
         [Display(Name = "Address")]
         [StringLength(50, MinimumLength = 1, ErrorMessage = "Address cannot be longer than 50 and at least 1 characters.")]
-        public string EmAddress2 { get; set; }
+        public string EmAddress1 { get; set; }
 
+        [Required]
+        [Display(Name = "Address")]
+        [StringLength(50, MinimumLength = 1, ErrorMessage = "Address cannot be longer than 50 and at least 1 characters.")]
+        public string EmAddress2 { get; set; }
+            
         [Required]
         [Display(Name = "City")]
         [StringLength(50, MinimumLength = 1, ErrorMessage = "City cannot be longer than 50 and at least 1 characters.")]
@@ -88,15 +93,20 @@ namespace AccountantSystemv5.Models
         public virtual EmployeeType EmployeeType { get; set; }
         public virtual Exemptions Exemptions { get; set; }
 
-        //1-m purchase purchaseorder laboracquisition cashdisbursement LoanAgreement cashreceipt StockSubscription
-        public ICollection<Purchase> Purchase { get; set; }
-        public ICollection<PurchaseOrder> PurchaseOrder { get; set; }
-        public ICollection<LaborAcquisition> LaborAcquisition { get; set; }
-        public ICollection<CashDisbursement> CashDisbursement { get; set; }
-        public ICollection<LoanAgreement> LoanAgreemnet { get; set; }
-        public ICollection<CashReceipt> CashReceipt { get; set; }
-        public ICollection<StockSubscription> StockSubscription { get; set; }
+        //1-m purchase purchaseorder laboracquisition cashdisbursement LoanAgreement cashreceipt StockSubscription sale saleoder 
+        public virtual ICollection<Purchase> Purchase { get; set; }
+        public virtual ICollection<PurchaseOrder> PurchaseOrder { get; set; }
+        public virtual ICollection<LaborAcquisition> LaborAcquisition { get; set; }
+        public virtual ICollection<CashDisbursement> CashDisbursement { get; set; }
+        public virtual ICollection<LoanAgreement> LoanAgreemnet { get; set; }
+        public virtual ICollection<CashReceipt> CashReceipt { get; set; }
+        public virtual ICollection<StockSubscription> StockSubscription { get; set; }
+        public virtual ICollection<Sale> Sale { get; set; }
+        public virtual ICollection<SaleOrder> SaleOrder { get; set; }
 
+        //1-1 withholding
+        public virtual Withholding Withholding { get; set; } 
+        
         // 1-m Inflow E-W
         //public ICollection<InflowEmployeeWithholding> InflowEmployeeWithholdings { get; set; }
 

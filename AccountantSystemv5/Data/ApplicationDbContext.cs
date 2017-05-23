@@ -73,16 +73,34 @@ namespace AccountantSystemv5.Data
                 .WithOne(i => i.LoanAgreement)
                 .HasForeignKey<CashReceipt>(b => b.InvoiceID);
 
+            //1-1 Purchase-CD
+            modeBuilder.Entity<Purchase>()
+                .HasOne(p => p.CashDisbursement)
+                .WithOne(i => i.Purchase)
+                .HasForeignKey<CashDisbursement>(b => b.InventoryReceiptID);
+
+            //1-1 Sale-CashReceipt
+            modeBuilder.Entity<Sale>()
+                .HasOne(p => p.CashReceipt)
+                .WithOne(i => i.Sale)
+                .HasForeignKey<CashReceipt>(b => b.InvoiceID);
+
+            //1-1 Withholding-Employee
+            modeBuilder.Entity<Withholding>()
+               .HasOne(p => p.Employee)
+               .WithOne(i => i.Withholding)
+               .HasForeignKey<Employee>(b => b.MaritalStatus);
+
             //1-1 CD-employee_1
-            modeBuilder.Entity<Employee_1>()
-              .HasOne(p => p.CashDisBursement)
-              .WithOne(i => i.Employee_1)
-              .HasForeignKey<CashDisbursement>(b => b.VendorID);
+            /* modeBuilder.Entity<Employee_1>()
+               .HasOne(p => p.CashDisBursement)
+               .WithOne(i => i.Employee_1)
+               .HasForeignKey<CashDisbursement>(b => b.VendorID);*/
 
             //Dat  > 
             //C8 vs 9
             // SaleOrder vs Inventory 
-            modeBuilder.Entity<ReservationSaleOrderInventory>()
+            modeBuilder.Entity<ReservationSaleOrderInventory>() 
             .HasKey(t => new { t.SaleOrderID, t.InventoryID });
 
             modeBuilder.Entity<ReservationSaleOrderInventory>()

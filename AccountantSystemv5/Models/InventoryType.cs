@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -18,6 +18,7 @@ namespace AccountantSystemv5.Models
         [StringLength(50, MinimumLength = 1, ErrorMessage = "Description cannot be longer than 50 and at least 1 characters.")]
         public string InventoryTypeDescription { get; set; }
 
-        public ICollection<Inventory> Inventory { get; set; }
+        //1-m inventory
+        public virtual ICollection<Inventory> Inventory { get; set; }
     }
 }
