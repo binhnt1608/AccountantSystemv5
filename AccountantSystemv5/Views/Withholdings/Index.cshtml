@@ -1,0 +1,65 @@
+@model IEnumerable<AccountantSystemv5.Models.Withholding>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.MaritalStatus)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FWTBracket)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FWTLowerLimit)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FWTUpperLimit)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FWTRate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FWTBracketBaseAmt)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaritalStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FWTBracket)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FWTLowerLimit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FWTUpperLimit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FWTRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FWTBracketBaseAmt)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

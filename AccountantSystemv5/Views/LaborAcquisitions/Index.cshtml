@@ -1,0 +1,59 @@
+@model IEnumerable<AccountantSystemv5.Models.LaborAcquisition>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmployeeSupervisorID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LAPayPeriodEnded)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LARegularTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LAOvertime)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employee)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeSupervisorID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LAPayPeriodEnded)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LARegularTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LAOvertime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Employee.EmAddress1)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TimeCardID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.TimeCardID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.TimeCardID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

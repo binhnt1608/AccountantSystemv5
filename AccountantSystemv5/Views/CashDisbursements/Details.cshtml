@@ -1,0 +1,66 @@
+@model AccountantSystemv5.Models.CashDisbursement
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CashDisbursement</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CashDisbursementAmount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CashDisbursementAmount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CashDisbursementDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CashDisbursementDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CashAccount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CashAccount.BankAccountNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CashDisbursementType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CashDisbursementType.EventTypeName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Employee.EmAddress1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LaborAcquisition)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LaborAcquisition.TimeCardID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Purchase)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Purchase.VendorID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vendor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vendor.VendorAddress1)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.CheckNumber">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -8,6 +8,7 @@ namespace AccountantSystemv5.Models
 {
     public class Sale
     {
+        [Key]
         [Display(Name = "Invoce #")]
         public int InvoiceID { get; set; }
 
@@ -37,11 +38,11 @@ namespace AccountantSystemv5.Models
         public virtual Employee Employee { get; set; }
 
         //1-1 cashreceipt 
-        public virtual CashReceipt CashReceipt { get; set; }
+        public virtual ICollection<CashReceipt> CashReceipt { get; set; }
         
 
         //Dat
         // Inventory vs Sale
-        public List<OutflowSaleInventory> OutflowSaleInventories { get; set; }
+        public virtual List<OutflowSaleInventory> OutflowSaleInventories { get; set; }
     }
 }

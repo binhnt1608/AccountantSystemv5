@@ -1,0 +1,71 @@
+@model AccountantSystemv5.Models.StockHolderCreditor
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>StockHolderCreditor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <input type="hidden" asp-for="VendorID" />
+        <dt>
+            @Html.DisplayNameFor(model => model.FinancierName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FinancierName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FinancierAddress1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FinancierAddress1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FinancierAddress2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FinancierAddress2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FinancierCity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FinancierCity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FinancierState)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FinancierState)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FinancierZipCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FinancierZipCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FinancierTelephone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FinancierTelephone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FinancierPrimaryContact)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FinancierPrimaryContact)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
+</div>

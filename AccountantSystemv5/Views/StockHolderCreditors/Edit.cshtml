@@ -1,0 +1,85 @@
+@model AccountantSystemv5.Models.StockHolderCreditor
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Edit">
+    <div class="form-horizontal">
+        <h4>StockHolderCreditor</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="VendorID" />
+        <div class="form-group">
+            <label asp-for="FinancierName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="FinancierName" class="form-control" />
+                <span asp-validation-for="FinancierName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="FinancierAddress1" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="FinancierAddress1" class="form-control" />
+                <span asp-validation-for="FinancierAddress1" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="FinancierAddress2" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="FinancierAddress2" class="form-control" />
+                <span asp-validation-for="FinancierAddress2" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="FinancierCity" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="FinancierCity" class="form-control" />
+                <span asp-validation-for="FinancierCity" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="FinancierState" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="FinancierState" class="form-control" />
+                <span asp-validation-for="FinancierState" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="FinancierZipCode" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="FinancierZipCode" class="form-control" />
+                <span asp-validation-for="FinancierZipCode" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="FinancierTelephone" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="FinancierTelephone" class="form-control" />
+                <span asp-validation-for="FinancierTelephone" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="FinancierPrimaryContact" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="FinancierPrimaryContact" class="form-control" />
+                <span asp-validation-for="FinancierPrimaryContact" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

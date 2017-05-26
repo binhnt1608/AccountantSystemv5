@@ -8,6 +8,7 @@ namespace AccountantSystemv5.Models
 {
     public class FulfillmentLACD
     {
+        [Key]
         [Display(Name = "LoanPayment #")]
         public int LoanPaymentID { get; set; }
 
@@ -34,6 +35,6 @@ namespace AccountantSystemv5.Models
         public virtual LoanAgreement LoanAgreement { get; set; }
 
         //1-1 CashDisbursement
-        public virtual CashDisbursement CashDisbursement { get; set; }
+        public virtual ICollection<CashDisbursement> CashDisbursement { get; set; }
     }
 }

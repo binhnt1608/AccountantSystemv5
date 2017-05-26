@@ -8,6 +8,7 @@ namespace AccountantSystemv5.Models
 {
     public class CashReceipt
     {
+        [Key]
         [Display(Name = "RA #")]
         public int RemittanceAdviceID { get; set; }
 

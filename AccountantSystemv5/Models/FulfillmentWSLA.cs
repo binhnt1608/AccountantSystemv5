@@ -8,6 +8,7 @@ namespace AccountantSystemv5.Models
 {
     public class FulfillmentWSLA
     {
+        [Key]
         [Display(Name = "Schedule #")]
         public int ScheduleID { get; set; }
 

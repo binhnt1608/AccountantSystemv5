@@ -1,0 +1,71 @@
+@model IEnumerable<AccountantSystemv5.Models.LoanAgreement>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.FinancierID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LoanAmount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InterestRate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LoanDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MaturityDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PaymentsPerYear)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employee)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FinancierID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoanAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InterestRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoanDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaturityDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaymentsPerYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Employee.EmAddress1)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.LoanID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.LoanID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.LoanID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

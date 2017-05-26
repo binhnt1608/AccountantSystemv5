@@ -1,0 +1,108 @@
+@model AccountantSystemv5.Models.Employee
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeLastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeLastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeFirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeFirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MI)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MI)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeSSN)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeSSN)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmAddress1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmAddress1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmAddress2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmAddress2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmCity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmCity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmState)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmState)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmZipcode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmZipcode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmTelephone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmTelephone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MaritalStatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MaritalStatus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmExemption)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmExemption)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmPayRate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmPayRate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmStartDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmStartDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeType.EmployeeTypeID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.EmployeeID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

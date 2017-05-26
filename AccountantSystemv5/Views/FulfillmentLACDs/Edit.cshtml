@@ -1,0 +1,64 @@
+@model AccountantSystemv5.Models.FulfillmentLACD
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Edit">
+    <div class="form-horizontal">
+        <h4>FulfillmentLACD</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="LoanPaymentID" />
+        <div class="form-group">
+            <label asp-for="LoanID" class="control-label col-md-2"></label>
+            <div class="col-md-10">
+                <select asp-for="LoanID" class="form-control" asp-items="ViewBag.LoanID"></select>
+                <span asp-validation-for="LoanID" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PaymentDueDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PaymentDueDate" class="form-control" />
+                <span asp-validation-for="PaymentDueDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PaymentNum" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PaymentNum" class="form-control" />
+                <span asp-validation-for="PaymentNum" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PrincipalAmount" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PrincipalAmount" class="form-control" />
+                <span asp-validation-for="PrincipalAmount" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="InterestAmount" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="InterestAmount" class="form-control" />
+                <span asp-validation-for="InterestAmount" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

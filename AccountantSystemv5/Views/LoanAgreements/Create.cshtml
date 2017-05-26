@@ -1,0 +1,76 @@
+@model AccountantSystemv5.Models.LoanAgreement
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<form asp-action="Create">
+    <div class="form-horizontal">
+        <h4>LoanAgreement</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="FinancierID" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="FinancierID" class="form-control" />
+                <span asp-validation-for="FinancierID" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="EmployeeID" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="EmployeeID" class ="form-control" asp-items="ViewBag.EmployeeID"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="LoanAmount" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="LoanAmount" class="form-control" />
+                <span asp-validation-for="LoanAmount" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="InterestRate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="InterestRate" class="form-control" />
+                <span asp-validation-for="InterestRate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="LoanDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="LoanDate" class="form-control" />
+                <span asp-validation-for="LoanDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="MaturityDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="MaturityDate" class="form-control" />
+                <span asp-validation-for="MaturityDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PaymentsPerYear" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PaymentsPerYear" class="form-control" />
+                <span asp-validation-for="PaymentsPerYear" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

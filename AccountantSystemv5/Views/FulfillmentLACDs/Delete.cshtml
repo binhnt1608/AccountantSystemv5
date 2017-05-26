@@ -1,0 +1,53 @@
+@model AccountantSystemv5.Models.FulfillmentLACD
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>FulfillmentLACD</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <input type="hidden" asp-for="LoanPaymentID" />
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentDueDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PaymentDueDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentNum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PaymentNum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrincipalAmount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrincipalAmount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InterestAmount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InterestAmount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LoanAgreement)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LoanAgreement.InterestRate)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
+</div>

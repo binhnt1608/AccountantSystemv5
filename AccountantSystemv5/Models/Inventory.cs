@@ -9,7 +9,7 @@ namespace AccountantSystemv5.Models
     public class Inventory
     {
         //public Inventory() { }
-
+        [Key]
         [Required]
         [Display(Name = "Inventory #")]
         public int InventoryID { get; set; }
@@ -51,9 +51,6 @@ namespace AccountantSystemv5.Models
         
         // Inventory vs Purchase
         public virtual List<InflowPurchaseInventory> InflowPurchaseInventories { get; set; }
-
-
-
 
     }
 }

@@ -8,6 +8,7 @@ namespace AccountantSystemv5.Models
 {
     public class CashDisbursement
     {
+        [Key]
         [Display(Name = "Check Number #")]
         public int CheckNumber { get; set; }
 
@@ -33,7 +34,7 @@ namespace AccountantSystemv5.Models
         //InventoryREceiptID
         [Display(Name = "Event #")]
         public int InventoryReceiptID { get; set; }
-
+       
         //cashdisbursement amount
         [Display(Name = "Amount Paid")]
         public int CashDisbursementAmount { get; set; }

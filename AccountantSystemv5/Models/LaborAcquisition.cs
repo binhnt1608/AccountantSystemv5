@@ -11,7 +11,7 @@ namespace AccountantSystemv5.Models
         //public LaborAcquisition()
         //{
         //}
-
+        [Key]
         [Display(Name = "Time Card #")]
         public int TimeCardID { get; set; }
 
@@ -40,7 +40,7 @@ namespace AccountantSystemv5.Models
         public int LAOvertime { get; set; }
 
         //1-1 CashDisbursement
-        public virtual CashDisbursement CashDisbursement { get; set; }
+        public virtual ICollection<CashDisbursement> CashDisbursement { get; set; }
 
         //m-1 employee employee1
         public virtual Employee Employee { get; set; }
@@ -49,9 +49,9 @@ namespace AccountantSystemv5.Models
 
         //Dat > 
         // labor type vs LA
-        public ICollection<InflowLALT> InflowLALTs { get; set; }
+        public virtual ICollection<InflowLALT> InflowLALTs { get; set; }
 
         // LA-WSLA
-        public ICollection<FulfillmentWSLA> FulfillmentWSLAs { get; set; }
+        public virtual ICollection<FulfillmentWSLA> FulfillmentWSLAs { get; set; }
     }
 }

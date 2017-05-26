@@ -1,0 +1,41 @@
+@model AccountantSystemv5.Models.FulfillmentSSCD
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>FulfillmentSSCD</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <input type="hidden" asp-for="DividendID" />
+        <dt>
+            @Html.DisplayNameFor(model => model.DividendDeclarationDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DividendDeclarationDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DividendPerShare)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DividendPerShare)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StockSubscription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StockSubscription.StockID)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
+</div>

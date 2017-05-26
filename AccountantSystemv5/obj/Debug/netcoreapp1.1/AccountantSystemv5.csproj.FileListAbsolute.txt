@@ -12,7 +12,6 @@ C:\Users\USER\Documents\GitHub\AccountantSystemv5\AccountantSystemv5\bin\Debug\n
 C:\Users\USER\Documents\GitHub\AccountantSystemv5\AccountantSystemv5\bin\Debug\netcoreapp1.1\AccountantSystemv5.runtimeconfig.dev.json
 C:\Users\USER\Documents\GitHub\AccountantSystemv5\AccountantSystemv5\bin\Debug\netcoreapp1.1\AccountantSystemv5.dll
 C:\Users\USER\Documents\GitHub\AccountantSystemv5\AccountantSystemv5\bin\Debug\netcoreapp1.1\AccountantSystemv5.pdb
-C:\Users\USER\Documents\GitHub\AccountantSystemv5\AccountantSystemv5\obj\Debug\netcoreapp1.1\AccountantSystemv5.csprojResolveAssemblyReference.cache
 C:\Users\USER\Documents\GitHub\AccountantSystemv5\AccountantSystemv5\obj\Debug\netcoreapp1.1\UserSecretsAssemblyInfo.cs
 C:\Users\USER\Documents\GitHub\AccountantSystemv5\AccountantSystemv5\obj\Debug\netcoreapp1.1\AccountantSystemv5.AssemblyInfo.cs
 C:\Users\USER\Documents\GitHub\AccountantSystemv5\AccountantSystemv5\obj\Debug\netcoreapp1.1\AccountantSystemv5.dll

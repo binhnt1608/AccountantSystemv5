@@ -8,6 +8,7 @@ namespace AccountantSystemv5.Models
 {
     public class CashAccount
     {
+        [Key]
         [Display(Name = "Cash Account #")]
         public int CashAccountID { get; set; }
 

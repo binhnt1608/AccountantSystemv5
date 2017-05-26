@@ -37,10 +37,13 @@ namespace AccountantSystemv5.Data
         // WorkSchedule vs Employee 
         public DbSet<Employee> Employees { get; set; }
 
-
-
-
-
+        public DbSet<CashDisbursement> CashDisbursements { get; set; }
+        public DbSet<FulfillmentLACD> FulfillmentLACDs { get; set; }
+        public DbSet<FulfillmentSSCD> FulfillmentSSCDs { get; set; }
+        public DbSet<CashReceipt> CashReceipts { get; set; }
+        public DbSet<LoanAgreement> LoanAgreements { get; set; }
+        public DbSet<StockSubscription> StockSubscriptions { get; set; }
+        public DbSet<Withholding> Withholdings { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modeBuilder)
         {
@@ -49,47 +52,47 @@ namespace AccountantSystemv5.Data
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
 
-            //1-1 CD-FLACD
-            modeBuilder.Entity<FulfillmentLACD>()
-                .HasOne(p => p.CashDisbursement)
-                .WithOne(i => i.FulfillmentLACD)
-                .HasForeignKey<CashDisbursement>(b => b.InventoryReceiptID);
+            //1 - 1 CD - FLACD
+            //modeBuilder.Entity<FulfillmentLACD>()
+            //    .HasOne(p => p.CashDisbursement)
+            //    .WithOne(i => i.FulfillmentLACD)
+            //    .HasForeignKey<CashDisbursement>(b => b.InventoryReceiptID);
 
-            //1-1 CD-FSSCD
-            modeBuilder.Entity<FulfillmentSSCD>()
-                .HasOne(p => p.CashDisbursement)
-                .WithOne(i => i.FulfillmentSSCD)
-                .HasForeignKey<CashDisbursement>(b => b.InventoryReceiptID);
+            //1 - 1 CD - FSSCD
+            //modeBuilder.Entity<FulfillmentSSCD>()
+            //    .HasOne(p => p.CashDisbursement)
+            //    .WithOne(i => i.FulfillmentSSCD)
+            //    .HasForeignKey<CashDisbursement>(b => b.InventoryReceiptID);
 
-            //1-1 CR-SS
-            modeBuilder.Entity<StockSubscription>()
-                .HasOne(p => p.CashReceipt)
-                .WithOne(i => i.StockSubscription)
-                .HasForeignKey<CashReceipt>(b => b.InvoiceID);
+            //1 - 1 CR - SS
+            //modeBuilder.Entity<StockSubscription>()
+            //    .HasOne(p => p.CashReceipt)
+            //    .WithOne(i => i.StockSubscription)
+            //    .HasForeignKey<CashReceipt>(b => b.InvoiceID);
 
-            //1-1 CR-LA
-            modeBuilder.Entity<LoanAgreement>()
-                .HasOne(p => p.CashReceipt)
-                .WithOne(i => i.LoanAgreement)
-                .HasForeignKey<CashReceipt>(b => b.InvoiceID);
+            //1 - 1 CR - LA
+            //modeBuilder.Entity<LoanAgreement>()
+            //    .HasOne(p => p.CashReceipt)
+            //    .WithOne(i => i.LoanAgreement)
+            //    .HasForeignKey<CashReceipt>(b => b.InvoiceID);
 
-            //1-1 Purchase-CD
-            modeBuilder.Entity<Purchase>()
-                .HasOne(p => p.CashDisbursement)
-                .WithOne(i => i.Purchase)
-                .HasForeignKey<CashDisbursement>(b => b.InventoryReceiptID);
+            //1 - 1 Purchase - CD
+            //modeBuilder.Entity<Purchase>()
+            //    .HasOne(p => p.CashDisbursement)
+            //    .WithOne(i => i.Purchase)
+            //    .HasForeignKey<CashDisbursement>(b => b.InventoryReceiptID);
 
-            //1-1 Sale-CashReceipt
-            modeBuilder.Entity<Sale>()
-                .HasOne(p => p.CashReceipt)
-                .WithOne(i => i.Sale)
-                .HasForeignKey<CashReceipt>(b => b.InvoiceID);
+            //1 - 1 Sale - CashReceipt
+            //modeBuilder.Entity<Sale>()
+            //    .HasOne(p => p.CashReceipt)
+            //    .WithOne(i => i.Sale)
+            //    .HasForeignKey<CashReceipt>(b => b.InvoiceID);
 
-            //1-1 Withholding-Employee
-            modeBuilder.Entity<Withholding>()
-               .HasOne(p => p.Employee)
-               .WithOne(i => i.Withholding)
-               .HasForeignKey<Employee>(b => b.MaritalStatus);
+            //1 - 1 Withholding - Employee
+            //modeBuilder.Entity<Withholding>()
+            //   .HasOne(p => p.Employee)
+            //   .WithOne(i => i.Withholding)
+            //   .HasForeignKey<Employee>(b => b.MaritalStatus);
 
             //1-1 CD-employee_1
             /* modeBuilder.Entity<Employee_1>()
@@ -157,33 +160,33 @@ namespace AccountantSystemv5.Data
 
             // C10
             //Work Schedule vs LaborType
-            modeBuilder.Entity<ReservationWSLT>()
-            .HasKey(t => new { t.ScheduleID, t.LaborTypeID });
+            //modeBuilder.Entity<ReservationWSLT>()
+            //.HasKey(t => new { t.ScheduleID, t.LaborTypeID });
 
-            modeBuilder.Entity<ReservationWSLT>()
-                .HasOne(pt => pt.WorkSchedule)
-                .WithMany(p => p.ReservationWSLTs)
-                .HasForeignKey(pt => pt.ScheduleID);
+            //modeBuilder.Entity<ReservationWSLT>()
+            //    .HasOne(pt => pt.WorkSchedule)
+            //    .WithMany(p => p.ReservationWSLTs)
+            //    .HasForeignKey(pt => pt.ScheduleID);
 
-            modeBuilder.Entity<ReservationWSLT>()
-                .HasOne(pt => pt.LaborType)
-                .WithMany(t => t.ReservationWSLTs)
-                .HasForeignKey(pt => pt.LaborTypeID);
+            //modeBuilder.Entity<ReservationWSLT>()
+            //    .HasOne(pt => pt.LaborType)
+            //    .WithMany(t => t.ReservationWSLTs)
+            //    .HasForeignKey(pt => pt.LaborTypeID);
 
             //Work Schedule vs Labor Acquistion
 
-            modeBuilder.Entity<FulfillmentWSLA>()
-            .HasKey(t => new { t.ScheduleID, t.TimeCardID });
+            //modeBuilder.Entity<FulfillmentWSLA>()
+            //.HasKey(t => new { t.ScheduleID, t.TimeCardID });
 
-            modeBuilder.Entity<FulfillmentWSLA>()
-                .HasOne(pt => pt.WorkSchedule)
-                .WithMany(p => p.FulfillmentWSLAs)
-                .HasForeignKey(pt => pt.ScheduleID);
+            //modeBuilder.Entity<FulfillmentWSLA>()
+            //    .HasOne(pt => pt.WorkSchedule)
+            //    .WithMany(p => p.FulfillmentWSLAs)
+            //    .HasForeignKey(pt => pt.ScheduleID);
 
-            modeBuilder.Entity<FulfillmentWSLA>()
-                .HasOne(pt => pt.LaborAcquisition)
-                .WithMany(t => t.FulfillmentWSLAs)
-                .HasForeignKey(pt => pt.TimeCardID);
+            //modeBuilder.Entity<FulfillmentWSLA>()
+            //    .HasOne(pt => pt.LaborAcquisition)
+            //    .WithMany(t => t.FulfillmentWSLAs)
+            //    .HasForeignKey(pt => pt.TimeCardID);
 
             // labor type vs labor acquistion
             modeBuilder.Entity<InflowLALT>()
@@ -200,18 +203,18 @@ namespace AccountantSystemv5.Data
                 .HasForeignKey(pt => pt.LaborTypeID);
 
             // Work Schedule vs Employee
-            modeBuilder.Entity<ExternalPartWSE>()
-            .HasKey(t => new { t.ScheduleID, t.EmployeeID });
+            //modeBuilder.Entity<ExternalPartWSE>()
+            //.HasKey(t => new { t.ScheduleID, t.EmployeeID });
 
-            modeBuilder.Entity<ExternalPartWSE>()
-                .HasOne(pt => pt.Schedule)
-                .WithMany(p => p.ExternalPartWSEs)
-                .HasForeignKey(pt => pt.ScheduleID);
+            //modeBuilder.Entity<ExternalPartWSE>()
+            //    .HasOne(pt => pt.Schedule)
+            //    .WithMany(p => p.ExternalPartWSEs)
+            //    .HasForeignKey(pt => pt.ScheduleID);
 
-            modeBuilder.Entity<ExternalPartWSE>()
-                .HasOne(pt => pt.Employee)
-                .WithMany(t => t.ExternalPartWSEs)
-                .HasForeignKey(pt => pt.EmployeeID);
+            //modeBuilder.Entity<ExternalPartWSE>()
+            //    .HasOne(pt => pt.Employee)
+            //    .WithMany(t => t.ExternalPartWSEs)
+            //    .HasForeignKey(pt => pt.EmployeeID);
 
 
 

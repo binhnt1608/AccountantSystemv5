@@ -8,6 +8,7 @@ namespace AccountantSystemv5.Models
 {
     public class ReservationWSLT
     {
+        [Key]
         [Display(Name = "Schedule #")]
         public int ScheduleID { get; set; }
 
@@ -15,8 +16,8 @@ namespace AccountantSystemv5.Models
         public int LaborTypeID { get; set; }
 
         //m-1 workschedule labortype
-        public WorkSchedule WorkSchedule { get; set; }
+        public virtual WorkSchedule WorkSchedule { get; set; }
 
-        public LaborType LaborType { get; set; }
+        public virtual LaborType LaborType { get; set; }
     }
 }

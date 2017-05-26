@@ -1,0 +1,66 @@
+@model AccountantSystemv5.Models.StockHolderCreditor
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>StockHolderCreditor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FinancierName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FinancierName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FinancierAddress1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FinancierAddress1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FinancierAddress2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FinancierAddress2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FinancierCity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FinancierCity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FinancierState)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FinancierState)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FinancierZipCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FinancierZipCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FinancierTelephone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FinancierTelephone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FinancierPrimaryContact)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FinancierPrimaryContact)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.VendorID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -8,6 +8,7 @@ namespace AccountantSystemv5.Models
 {
     public class ExternalPartWSE
     {
+        [Key]
         [Display(Name = "Schedule #")]
         public int ScheduleID { get; set; }
 
@@ -15,7 +16,7 @@ namespace AccountantSystemv5.Models
         public int EmployeeID { get; set; }
 
         //m-1 employee withholding
-        public Employee Employee { get; set; }
-        public WorkSchedule Schedule { get; set; }
+        public virtual Employee Employee { get; set; }
+        public virtual WorkSchedule Schedule { get; set; }
     }
 }

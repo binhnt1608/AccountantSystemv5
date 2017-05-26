@@ -1,0 +1,48 @@
+@model AccountantSystemv5.Models.Inventory
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Inventory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.InventoryStdCosst)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InventoryStdCosst)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InventoryListPrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InventoryListPrice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InventoryComposition)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InventoryComposition.InventoryCompositionCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InventoryDiameter)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InventoryDiameter.CompositionID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InventoryType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InventoryType.CompositionID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.InventoryID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

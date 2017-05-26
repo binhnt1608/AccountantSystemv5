@@ -8,9 +8,10 @@ namespace AccountantSystemv5.Models
 {
     public class Employee
     {
-        public Employee()
-        {
-        }
+        //public Employee()
+        //{
+        //}
+        [Key]
         [Display(Name = "Employee #")]
         public int EmployeeID { get; set; }
 

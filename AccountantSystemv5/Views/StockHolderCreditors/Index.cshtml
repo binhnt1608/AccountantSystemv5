@@ -1,0 +1,77 @@
+@model IEnumerable<AccountantSystemv5.Models.StockHolderCreditor>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.FinancierName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FinancierAddress1)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FinancierAddress2)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FinancierCity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FinancierState)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FinancierZipCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FinancierTelephone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FinancierPrimaryContact)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FinancierName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FinancierAddress1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FinancierAddress2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FinancierCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FinancierState)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FinancierZipCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FinancierTelephone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FinancierPrimaryContact)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.VendorID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.VendorID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.VendorID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

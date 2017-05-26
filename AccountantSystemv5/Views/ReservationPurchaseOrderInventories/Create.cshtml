@@ -1,0 +1,55 @@
+@model AccountantSystemv5.Models.ReservationPurchaseOrderInventory
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<form asp-action="Create">
+    <div class="form-horizontal">
+        <h4>ReservationPurchaseOrderInventory</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="InventoryID" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="InventoryID" class ="form-control" asp-items="ViewBag.InventoryID"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="QuantityOrdered" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="QuantityOrdered" class="form-control" />
+                <span asp-validation-for="QuantityOrdered" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="POPrice" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="POPrice" class="form-control" />
+                <span asp-validation-for="POPrice" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="VendorItemID" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="VendorItemID" class="form-control" />
+                <span asp-validation-for="VendorItemID" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -45,6 +45,6 @@ namespace AccountantSystemv5.Models
         //// 1 - m Inflow E-W
         //public ICollection<InflowEmployeeWithholding> InflowEmployeeWithholdings { get; set; }
         //1-1
-        public virtual Employee Employee { get; set; }
+        public virtual ICollection<Employee> Employee { get; set; }
     }
 }

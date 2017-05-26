@@ -8,6 +8,7 @@ namespace AccountantSystemv5.Models
 {
     public class InventoryDiameter
     {
+        [Key]
         [Display(Name = "Diameter #")]
         public int CompositionID { get; set; }
 

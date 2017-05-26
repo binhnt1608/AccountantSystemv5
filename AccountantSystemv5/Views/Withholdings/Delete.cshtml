@@ -1,0 +1,59 @@
+@model AccountantSystemv5.Models.Withholding
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Withholding</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <input type="hidden" asp-for="ID" />
+        <dt>
+            @Html.DisplayNameFor(model => model.MaritalStatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MaritalStatus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FWTBracket)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FWTBracket)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FWTLowerLimit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FWTLowerLimit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FWTUpperLimit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FWTUpperLimit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FWTRate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FWTRate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FWTBracketBaseAmt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FWTBracketBaseAmt)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
+</div>

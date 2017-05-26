@@ -1,0 +1,132 @@
+@model AccountantSystemv5.Models.Employee
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<form asp-action="Create">
+    <div class="form-horizontal">
+        <h4>Employee</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="EmployeeLastName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="EmployeeLastName" class="form-control" />
+                <span asp-validation-for="EmployeeLastName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="EmployeeFirstName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="EmployeeFirstName" class="form-control" />
+                <span asp-validation-for="EmployeeFirstName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="MI" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="MI" class="form-control" />
+                <span asp-validation-for="MI" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="EmployeeSSN" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="EmployeeSSN" class="form-control" />
+                <span asp-validation-for="EmployeeSSN" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="EmAddress1" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="EmAddress1" class="form-control" />
+                <span asp-validation-for="EmAddress1" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="EmAddress2" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="EmAddress2" class="form-control" />
+                <span asp-validation-for="EmAddress2" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="EmCity" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="EmCity" class="form-control" />
+                <span asp-validation-for="EmCity" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="EmState" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="EmState" class="form-control" />
+                <span asp-validation-for="EmState" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="EmZipcode" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="EmZipcode" class="form-control" />
+                <span asp-validation-for="EmZipcode" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="EmTelephone" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="EmTelephone" class="form-control" />
+                <span asp-validation-for="EmTelephone" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="MaritalStatus" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="MaritalStatus" class="form-control" />
+                <span asp-validation-for="MaritalStatus" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="EmExemption" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="EmExemption" class="form-control" />
+                <span asp-validation-for="EmExemption" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="EmPayRate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="EmPayRate" class="form-control" />
+                <span asp-validation-for="EmPayRate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="EmployeeTypeID" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="EmployeeTypeID" class ="form-control" asp-items="ViewBag.EmployeeTypeID"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="EmStartDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="EmStartDate" class="form-control" />
+                <span asp-validation-for="EmStartDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

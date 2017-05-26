@@ -11,6 +11,13 @@
   <PropertyGroup>
     <UserSecretsId>aspnet-AccountantSystemv5-b593b064-3fbe-46c0-ac40-81b671b67e44</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Properties\wwwroot\**" />
+    <Content Remove="Properties\wwwroot\**" />
+    <EmbeddedResource Remove="Properties\wwwroot\**" />
+    <None Remove="Properties\wwwroot\**" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.1" />

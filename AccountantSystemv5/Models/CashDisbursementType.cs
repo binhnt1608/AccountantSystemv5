@@ -8,6 +8,7 @@ namespace AccountantSystemv5.Models
 {
     public class CashDisbursementType
     {
+        [Key]
         [Display(Name = "CD Type #")]
         public int CDTypeID { get; set; }
 

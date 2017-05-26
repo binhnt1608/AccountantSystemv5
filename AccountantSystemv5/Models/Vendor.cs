@@ -8,6 +8,7 @@ namespace AccountantSystemv5.Models
 {
     public class Vendor
     {
+        [Key]
         [Display(Name = "Vendor #")]
         public int VendorID { get; set; }
 
@@ -48,7 +49,7 @@ namespace AccountantSystemv5.Models
         public string VendorPrimaryContact { get; set; }
 
         //1-m purchaseorder
-        public ICollection<CashDisbursement> CashDisbursement { get; set; }
-        public ICollection<PurchaseOrder> PurchaseOrder { get; set; }
+        public virtual ICollection<CashDisbursement> CashDisbursement { get; set; }
+        public virtual ICollection<PurchaseOrder> PurchaseOrder { get; set; }
     }
 }

@@ -1,0 +1,77 @@
+@model IEnumerable<AccountantSystemv5.Models.CashDisbursement>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CashDisbursementAmount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CashDisbursementDate)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CashAccount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CashDisbursementType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LaborAcquisition)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Purchase)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vendor)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CashDisbursementAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CashDisbursementDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CashAccount.BankAccountNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CashDisbursementType.EventTypeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Employee.EmAddress1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LaborAcquisition.TimeCardID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Purchase.VendorID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vendor.VendorAddress1)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CheckNumber">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CheckNumber">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CheckNumber">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

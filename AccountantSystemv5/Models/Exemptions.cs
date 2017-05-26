@@ -8,6 +8,7 @@ namespace AccountantSystemv5.Models
 {
     public class Exemptions
     {
+        [Key]
         [Display(Name = "Exemption Number")]
         public int ExemptionNum { get; set; }
 
@@ -15,6 +16,6 @@ namespace AccountantSystemv5.Models
         public int ExemptionAmount { get; set; }
 
         //1-m employee
-        public ICollection<Employee> Employee { get; set; }
+        public virtual ICollection<Employee> Employee { get; set; }
     }
 }

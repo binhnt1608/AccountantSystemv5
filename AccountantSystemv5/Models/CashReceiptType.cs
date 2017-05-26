@@ -8,6 +8,7 @@ namespace AccountantSystemv5.Models
 {
     public class CashReceiptType
     {
+        [Key]
         [Display(Name = "CR Type #")]
         public int CRTypeID { get; set; }
 

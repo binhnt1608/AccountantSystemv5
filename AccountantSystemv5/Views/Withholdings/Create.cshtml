@@ -1,0 +1,70 @@
+@model AccountantSystemv5.Models.Withholding
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<form asp-action="Create">
+    <div class="form-horizontal">
+        <h4>Withholding</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="MaritalStatus" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="MaritalStatus" class="form-control" />
+                <span asp-validation-for="MaritalStatus" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="FWTBracket" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="FWTBracket" class="form-control" />
+                <span asp-validation-for="FWTBracket" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="FWTLowerLimit" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="FWTLowerLimit" class="form-control" />
+                <span asp-validation-for="FWTLowerLimit" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="FWTUpperLimit" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="FWTUpperLimit" class="form-control" />
+                <span asp-validation-for="FWTUpperLimit" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="FWTRate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="FWTRate" class="form-control" />
+                <span asp-validation-for="FWTRate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="FWTBracketBaseAmt" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="FWTBracketBaseAmt" class="form-control" />
+                <span asp-validation-for="FWTBracketBaseAmt" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,59 @@
+@model IEnumerable<AccountantSystemv5.Models.FulfillmentLACD>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.PaymentDueDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PaymentNum)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PrincipalAmount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InterestAmount)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LoanAgreement)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaymentDueDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaymentNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrincipalAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InterestAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoanAgreement.InterestRate)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.LoanPaymentID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.LoanPaymentID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.LoanPaymentID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

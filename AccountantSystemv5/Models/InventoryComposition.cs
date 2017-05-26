@@ -8,6 +8,7 @@ namespace AccountantSystemv5.Models
 {
     public class InventoryComposition
     {
+        [Key]
         [Display(Name = "Composition #")]
         public int CompositionID { get; set; }
 

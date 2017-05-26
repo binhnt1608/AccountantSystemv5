@@ -52,6 +52,9 @@ namespace AccountantSystemv5
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
+
+            services.AddDbContext<AccountantSystemv5Context>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("AccountantSystemv5Context")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

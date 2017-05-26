@@ -8,6 +8,7 @@ namespace AccountantSystemv5.Models
 {
     public class OutflowSaleInventory
     {
+        [Key]
         [Display(Name = "Sale Order #")]
         public int InvoiceID { get; set; }
 

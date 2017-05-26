@@ -8,6 +8,7 @@ namespace AccountantSystemv5.Models
 {
     public class StockSubscription
     {
+        [Key]
         [Display(Name = "Issue #")]
         public int StockID { get; set; }
 
@@ -34,7 +35,7 @@ namespace AccountantSystemv5.Models
         public DateTime StockIssueDate { get; set; }
 
         //1-1 cashreceipt
-        public virtual CashReceipt CashReceipt { get; set; }
+        public virtual ICollection<CashReceipt> CashReceipt { get; set; }
         //m-1 StockholderCreditor Employee
         public virtual StockHolderCreditor StockHolderCreditor { get; set; }
         public virtual Employee Employee { get; set; }

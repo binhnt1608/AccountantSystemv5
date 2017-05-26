@@ -8,10 +8,10 @@ namespace AccountantSystemv5.Models
 {
     public class WorkSchedule
     {
-        public WorkSchedule()
-        {
-        }
-
+        //public WorkSchedule()
+        //{
+        //}
+        [Key]
         [Display(Name = "Work Schedule #")]
         public int ScheduleID { get; set; }
 

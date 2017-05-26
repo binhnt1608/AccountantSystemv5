@@ -8,6 +8,7 @@ namespace AccountantSystemv5.Models
 {
     public class Customer
     {
+        [Key]
         [Display(Name = "Customer #")]
         public int CustomerID { get; set; }
 

@@ -8,6 +8,7 @@ namespace AccountantSystemv5.Models
 {
     public class FulfillmentSSCD
     {
+        [Key]
         [Display(Name = "Dividend #")]
         public int DividendID { get; set; }
 
@@ -28,6 +29,6 @@ namespace AccountantSystemv5.Models
         public virtual StockSubscription StockSubscription { get; set; }
 
         //1-1 CashDisbursement
-        public virtual CashDisbursement CashDisbursement { get; set; }
+        public virtual ICollection<CashDisbursement> CashDisbursement { get; set; }
     }
 }

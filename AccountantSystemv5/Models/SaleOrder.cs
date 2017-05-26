@@ -8,6 +8,7 @@ namespace AccountantSystemv5.Models
 {
     public class SaleOrder
     {
+        [Key]
         [Display(Name = "Sale Order #")]
         public int SaleOrderID { get; set; }
 
@@ -36,7 +37,7 @@ namespace AccountantSystemv5.Models
 
         //Dat
         //Inventory vs Sale Order
-        public List<ReservationSaleOrderInventory> ReservationSaleOrderInventories { get; set; }
+        public virtual List<ReservationSaleOrderInventory> ReservationSaleOrderInventories { get; set; }
 
         //m-1 sale
         public virtual ICollection<Sale> Sale { get; set; }

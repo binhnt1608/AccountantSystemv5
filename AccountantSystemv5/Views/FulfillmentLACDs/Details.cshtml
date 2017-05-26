@@ -1,0 +1,48 @@
+@model AccountantSystemv5.Models.FulfillmentLACD
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FulfillmentLACD</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentDueDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PaymentDueDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentNum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PaymentNum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrincipalAmount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrincipalAmount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InterestAmount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InterestAmount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LoanAgreement)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LoanAgreement.InterestRate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.LoanPaymentID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

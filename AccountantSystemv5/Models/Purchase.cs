@@ -45,10 +45,10 @@ namespace AccountantSystemv5.Models
         public virtual Vendor Vendor { get; set; }
         
         //1-1 cashdisbursement
-        public virtual CashDisbursement CashDisbursement { get; set; }
+        public virtual ICollection<CashDisbursement> CashDisbursement { get; set; }
 
         //Dat >
         //Inventory vs Purchase
-        public List<InflowPurchaseInventory> InflowPurchaseInventories { get; set; }
+        public virtual List<InflowPurchaseInventory> InflowPurchaseInventories { get; set; }
     }
 }

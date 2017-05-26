@@ -8,6 +8,7 @@ namespace AccountantSystemv5.Models
 {
     public class ReservationSaleOrderInventory
     {
+        [Key]
         [Display(Name = "Sale Order #")]
         public int SaleOrderID { get; set; }
 

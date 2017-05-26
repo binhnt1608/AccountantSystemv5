@@ -1,0 +1,71 @@
+@model AccountantSystemv5.Models.Vendor
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Vendor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <input type="hidden" asp-for="VendorID" />
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VendorName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorAddress1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VendorAddress1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorAddress2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VendorAddress2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorCity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VendorCity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorState)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VendorState)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorZipCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VendorZipCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorTelephone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VendorTelephone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorPrimaryContact)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VendorPrimaryContact)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
+</div>

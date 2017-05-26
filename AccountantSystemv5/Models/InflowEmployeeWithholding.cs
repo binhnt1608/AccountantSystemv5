@@ -8,6 +8,7 @@ namespace AccountantSystemv5.Models
 {
     public class InflowEmployeeWithholding
     {
+        [Key]
         [Display(Name = "Marital Status ")]
         public int MaritalStatus { get; set; }
 
@@ -15,7 +16,7 @@ namespace AccountantSystemv5.Models
         public int EmployeeID { get; set; }
 
         //m-1 employee withholding
-        public Employee Employee { get; set; }
-        public Withholding Withholding { get; set; }
+        public virtual Employee Employee { get; set; }
+        public virtual Withholding Withholding { get; set; }
     }
 }

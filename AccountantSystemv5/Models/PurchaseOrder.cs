@@ -11,6 +11,7 @@ namespace AccountantSystemv5.Models
         //public PurchaseOrder()
         //{
         //}
+        [Key]
         [Display(Name = "Purchase Order #")]
         public int PurchaseOrderID { get; set; }
 
@@ -47,6 +48,6 @@ namespace AccountantSystemv5.Models
 
         //Dat > 
         // Reservation PO-I
-        public List<ReservationPurchaseOrderInventory> ReservationPurchaseOrderInventories { get; set; }
+        public virtual List<ReservationPurchaseOrderInventory> ReservationPurchaseOrderInventories { get; set; }
     }
 }

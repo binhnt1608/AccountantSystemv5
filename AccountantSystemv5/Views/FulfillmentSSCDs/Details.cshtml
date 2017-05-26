@@ -1,0 +1,36 @@
+@model AccountantSystemv5.Models.FulfillmentSSCD
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FulfillmentSSCD</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DividendDeclarationDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DividendDeclarationDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DividendPerShare)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DividendPerShare)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StockSubscription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StockSubscription.StockID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.DividendID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

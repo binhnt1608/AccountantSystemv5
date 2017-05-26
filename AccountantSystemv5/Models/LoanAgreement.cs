@@ -8,6 +8,7 @@ namespace AccountantSystemv5.Models
 {
     public class LoanAgreement
     {
+        [Key]
         [Display(Name = "Loan #")]
         public int LoanID { get; set; }
 
@@ -54,6 +55,6 @@ namespace AccountantSystemv5.Models
         public virtual ICollection<FulfillmentLACD> FulfillmentLACD { get; set; }
 
         //1-1 
-        public virtual CashReceipt CashReceipt { get; set; }
+        public virtual ICollection<CashReceipt> CashReceipt { get; set; }
     }
 }

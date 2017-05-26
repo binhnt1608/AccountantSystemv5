@@ -8,10 +8,10 @@ namespace AccountantSystemv5.Models
 {
     public class LaborType
     {
-        public LaborType()
-        {
-        }
-
+        //public LaborType()
+        //{
+        //}
+        [Key]
         [Display(Name = "Labor Type #")]
         public int LaborTypeID { get; set; }
 

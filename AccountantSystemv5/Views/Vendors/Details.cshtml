@@ -1,0 +1,66 @@
+@model AccountantSystemv5.Models.Vendor
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vendor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VendorName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorAddress1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VendorAddress1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorAddress2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VendorAddress2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorCity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VendorCity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorState)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VendorState)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorZipCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VendorZipCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorTelephone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VendorTelephone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorPrimaryContact)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VendorPrimaryContact)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.VendorID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
